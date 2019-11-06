@@ -1,0 +1,23 @@
+.#{$prefix}-container-featured {
+  @include heightViewPort(70);
+  min-height: 500px;
+
+  .#{$prefix}-featured-image {
+    &::after {
+      @extend .#{$prefix}-image-shadow;
+    }
+    @extend .width-height;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    transition: all ease 0.4s;
+    backface-visibility: visible;
+    &:hover {
+      &::after {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+      transform: scale(1.05);
+    }
+  }
+}

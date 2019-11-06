@@ -1,0 +1,11 @@
+/* Height viewport */
+@mixin heightViewPort($value) {
+  height: $value + vh;
+}
+
+@mixin position($position, $top, $left, $bottom, $right) {
+  position: $position;
+  top: $top + px;
+  left: $left + px;
+  bottom: $bottom + px;
+}

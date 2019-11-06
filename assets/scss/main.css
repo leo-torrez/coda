@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.width-height, .coda-fluid, .coda-container-fluid, .coda-image-cover, .coda-image-shadow, .coda-container-featured .coda-featured-image::after, .coda-container-featured .coda-featured-image {
+  width: 100%;
+  height: 100%;
+}
+
+.coda-image-cover {
+  max-width: 100%;
+}
+
+/* Height viewport */
+/** Container Fluid **/
+.coda-image-shadow, .coda-container-featured .coda-featured-image::after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  content: '';
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.coda-container-featured {
+  height: 70vh;
+  min-height: 500px;
+}
+
+.coda-container-featured .coda-featured-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.coda-container-featured .coda-featured-image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.coda-container-featured .coda-featured-image:hover::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=main.css.map */

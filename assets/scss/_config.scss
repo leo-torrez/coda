@@ -1,0 +1,23 @@
+@import '_variables';
+
+$width: map-get($fluid, width);
+$height: map-get($fluid, height);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.width-height {
+  width: $width;
+  height: $height;
+}
+
+.#{$prefix}-fluid {
+  @extend .width-height;
+}
+
+.#{$prefix}-image-cover {
+  @extend .width-height;
+  max-width: 100%;
+}

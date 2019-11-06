@@ -1,0 +1,16 @@
+@import '_config';
+@import '_mixin';
+
+/** Container Fluid **/
+.#{$prefix}-container-fluid {
+  @extend .#{$prefix}-fluid;
+}
+
+.#{$prefix}-image-shadow {
+  @extend .width-height;
+  @include position(absolute, 0, 0, 0, 0);
+  content: '';
+  border-radius: 5px;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  transition: all 0.4s ease;
+}
